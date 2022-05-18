@@ -4,11 +4,13 @@ package edu.cds.basics;
 
 class Course {
 
+    // Attributes
     private String name;
     private String Students[];
     private int numberOfStudents;
     private int count;
 
+    // Construct instance
     public Course(String name, int numberOfStudents) {
         this.name = name;
         this.numberOfStudents = numberOfStudents;
@@ -32,16 +34,16 @@ class Course {
         if (count >= numberOfStudents)
             resize();
 
-        Students[count] = student;
-        count++;
+        Students[count++] = student;
     }
 
+    // Resize students array
     private void resize() {
+        // Create temporary array
         String tmp[] = Students;
-        Students = new String[count + 1];
+        Students = new String[count * 2];
 
-        for (int i = 0; i < tmp.length; i++)
-            Students[i] = tmp[i];
-
+        // Copy students into new resized array
+        System.arraycopy(tmp, 0, Students, 0, tmp.length);
     }
 }

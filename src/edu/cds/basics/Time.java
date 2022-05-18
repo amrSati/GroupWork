@@ -9,10 +9,7 @@ class Time {
     private int second;
 
     public Time() {
-        long timeMillis = System.currentTimeMillis();
-        hour = (int) (((timeMillis / 1000) / 60) / 60) % 24;
-        minute = (int) (((timeMillis / 1000) / 60) % 60);
-        second = (int) ((timeMillis / 1000) % 60);
+        this(System.currentTimeMillis());
     }
 
     public Time(long timeMillis) {

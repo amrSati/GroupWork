@@ -11,6 +11,7 @@ class Loan {
     private double loanAmount;
     private Date loanDate;
 
+    // Construct new instance
     public Loan() {
         annualInterestRate = 0;
         numberOfYears = 0;
@@ -61,7 +62,9 @@ class Loan {
         return totalPayment(annualInterestRate, numberOfYears, loanAmount);
     }
 
+    // Calculate monthly payment
     public static double monthlyPayment(double annualInterestRate, int numberOfYears, double loanAmount) {
+        // Divide the algorithm to be more readable
         double pay = (annualInterestRate / 100) * loanAmount;
         pay *= numberOfYears;
         pay += loanAmount;
@@ -69,6 +72,7 @@ class Loan {
         return pay;
     }
 
+    // Calculate total payment of the loan
     public static double totalPayment(double annualInterestRate, int numberOfYears, double loanAmount) {
         double total = (annualInterestRate / 100) * loanAmount;
         total *= numberOfYears;

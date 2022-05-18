@@ -5,8 +5,8 @@ package edu.cds.basics;
 class Fan {
 
     final private int SLOW = 1,
-            MEDIUM = 2,
-            FAST = 3;
+                      MEDIUM = 2,
+                      FAST = 3;
 
     private int speed;
     private boolean on;

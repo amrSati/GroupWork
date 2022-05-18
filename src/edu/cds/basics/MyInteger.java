@@ -4,7 +4,7 @@ package edu.cds.basics;
 
 public class MyInteger {
 
-    private int myInt;
+    private final int myInt;
 
     public MyInteger(int myInt) {
         this.myInt = myInt;
@@ -45,7 +45,7 @@ public class MyInteger {
     public static boolean isPrime(int x) {
         int y = x - 1;
 
-        for (; y != 1; y--)
+        for (; y > 1; y--)
             if ((x % y) == 0)
                 return false;
 
@@ -64,10 +64,12 @@ public class MyInteger {
         return myInt == x.getMyInt();
     }
 
+    // Convert digits string into integer
     public static int parseInt(String digit) {
         int num = 0, l = 1, i = digit.length() - 1;
 
         for (; i >= 0; i--) {
+            // if string contains characters other than digits, exit
             if (digit.charAt(i) < 48 || digit.charAt(i) > 57)
                 return -1;
 

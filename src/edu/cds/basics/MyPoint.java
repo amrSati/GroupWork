@@ -26,9 +26,7 @@ class MyPoint {
 
     // Return Euclidean distance for a MyPoint object
     public double distance(MyPoint points) {
-        double dist = Math.pow((x - points.getX()), 2)
-                + Math.pow((y - points.getY()), 2);
-        return Math.sqrt(dist);
+        return distance(points.x, points.y);
     }
 
     // Return Euclidean distance for given coordinates

@@ -22,6 +22,8 @@ public class PrintCalendar {
 
         // Print calendar for the month of the year
         printMonth(year, month);
+
+        System.out.println(output.toString());
     }
 
     /** Print the calendar for a month in a year */

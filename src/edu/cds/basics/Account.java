@@ -5,12 +5,13 @@ package edu.cds.basics;
 import java.util.Date;
 
 class Account {
-
+    // Attributes
     private int id;
     private double balance;
     private double annualInterestRate;
     private Date dateCreated;
 
+    // Constructor
     public Account() {
         id = 0;
         balance = 0;
@@ -18,6 +19,7 @@ class Account {
         dateCreated = new Date();
     }
 
+    // Methods
     public int getId() {
         return id;
     }
@@ -46,7 +48,7 @@ class Account {
         return dateCreated;
     }
 
-    public double getMonthlyInterestRate() {
+    public double getMonthlyInterestRate() { // Divide over 12 months
         return annualInterestRate / 12;
     }
 
